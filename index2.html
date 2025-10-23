@@ -3,16 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <title>Energetický Dashboard</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 <body>
-    <h1>Řízení toku energií v domě</h1>
-
+    <h1 class="text-lime-500 bg-gray-500 border border-brown-500">Řízení toku energií v domě</h1>
+    <section class="bg-zinc-100">
     <div id="info">
-        <p><strong>Výroba FV:</strong> 2.5 kW</p>
-        <p><strong>Spotřeba domu:</strong> 3.1 kW</p>
-        <p><strong>Stav baterie:</strong> 75 %</p>
+        <p>Výroba FV: 2.5 kW</p>
+        <p>Spotřeba domu: 3.1 kW</p>
+        <p>Stav baterie: 75 %</p>
     </div>
-
+    </section>
     <div id="graf">
         <h2>Historie výkonu</h2>
         <!-- sem později vložíme graf -->

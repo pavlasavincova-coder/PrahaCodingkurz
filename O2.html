@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+</head>
+<body>
+    
+        <nav class="container max-w-screen-xl mx-auto px-4 py-4 flex items-center justify-between flex-wrap">
+           <!-- Levá část: logo + odkazy -->
+          <div class="flex flex-col lg:flex-row items-center space-x-0 lg:space-x-4 space-y-2 lg:space-y-0">
+          <a href="/" class="flex items-center">  
+              <img width="50" height="50" alt="O2 logo" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4CAMAAAAOusbgAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAACHUExURQAAACBQ7yBQ/yBQ9yBQ9CBQ+iBQ8yBQ9yBQ8iBQ9SBR9yBQ9CBQ9iBQ9CBQ9iBO9yBQ9SBO9SBQ8yBQ9SBO9iBO9CBQ8yBQ9CBP9SBQ9SBQ9yBO9CBQ9CBP9SBP9iBQ9SBQ9iBQ9SBP9iBQ9CBQ9iBP9SBP9iBQ9SBP9SBP9iBP9CBP9SBP9Z82mw4AAAAsdFJOUwAQECAwMEBAUFBfYG9wcH9/gICAj5CQkJ+fn6Cgr6+vr7C/v7/Pz8/f3+/v3FQf8gAAA+RJREFUaN7tWmt32jAMTeKQkHluKYEmbCmMhKwOzv//fSvjnMKo/JBsYB/QZ5OLrh6WLEWRi7BCLNa93I8HkbJdL0SeRFeWXKyPgJfS15xdD3UBg36Ci2tgJ89m1KO0PLSy7ego8jmg2qkz7BE6FMmLESkyCOHFfsRL7c138jaSxFfpVI5UWfjgftuPdOnpdM9GL5HsPrhkZG9cIrIJV20ET9lBMl51YZG/61Hn2UXITTd65BgbR7ov7Qrwjm4G3bWBw2Wa+B20eYE1QeJZk6+WpkqDaZTOvQ2sLGkwbnzNzMCENdg9dO5Jdk3E1SG7ks3JuBpkV8+GPFq5ZgIQmdMVLpztBCUySVb4xT0i4oGoMqTwgMkBGVFliCpcqm9Ijs2AX61w+TZWFMeuyZFk9uyY4FovSFxQ5SeCZ+Av8zme69rbwjqVYzTTlLrpF5ZrwKd7SqEIWOwHNnvQepGvXCusiWm1cYX8UB+GaZBrE3UxUGbRgJFfynzuQxt3W8PpaSgTQ0Y23VAl0hdx8YG60FoqcIoir0OGPc67coxHlOSuXmHiSQbKW+hvKa/Gx4O9MSBw9wB+AJtDoAgI/PQfxnEXMHOhzNZcNVdPMJfolgqcoSprQWypnWoKFexvIiuQFmeYIlg0LXExsAzm1BzXzLfBfGtiOi9CGblClo1pqN6pxwamCsM1QytQheEa3/xlAZ5AwOiwNn8qRPKitNlViGKA8qCRjf7uBSi8peQ6dERJEmuAyir2VXigpXfcCAcaHXFimkX51xv52bnzmhHOyKMBUOXe1cyFzzs7NKOsHR8C9j6vsExRkUHci1qCFbwsS1FM3K7ljzxiZzuHcIezgSQT7enIvs6dBhN2D4NHkp/T5kS01n2RGJ6MGpdpGLyY83m5ZRAdMrWXIn/PaQNat/20M73eHbJi6mJm7eKUdunqbJCi08VllHI8eekTCdduP50PcJjmzJdC49W0MLYuef4hH5GxMmzl/Mvjkfr59LBMUQ2G2uSn7xrIhf3UqKoUYHQSObNNwo3kioGMPkVhkb8M6JhmRrR0TWFu8tuaoRtT86/bsbDK0r4jWhlrurghmdelu20shSDHK71jmIJD2wmzV6RXZbj+yvD+xRB8q7njBjB3apxdoZ1hT9W3rTBiDrbeZZGzzBBj4qwxYe8EZsv6tE/kVpGlfPMOEPxeTZG73S1hLp5k03K16TopZdetKkFZ6Z6hd3nCSOrV9tPl1F4NN8VN5J2IPrV14qa4izsZeAaUvrfFHZI74bIH7vWkHu8TwLW+VbtqvmrvhHt6Ox9uiXv+3teuLuRWwJjVlAfwA9gP+A9U8jBa/1ISKQAAAABJRU5ErkJggg==">
+          </a>
+           <!-- Hamburger ikonka (mobil) -->
+            <button @click="open = !open" class="lg:hidden text-[#0050FF] focus:outline-none">
+               <i data-lucide="menu" class="w-6 h-6"></i>  
+            </button>
+            <a href="#" class="text-[#0050FF] hidden sm:flex hover:underline">O2 Spolu</a>
+            <a href="#" class="ml-4 text-gray-900 hidden sm:flex hover:underline">Tarify</a>
+            <a href="#" class="ml-4 text-gray-900 hidden sm:flex hover:underline">Internet</a>
+            <a href="#" class="ml-4 text-gray-900 hidden sm:flex hover:underline">Oneplay</a>
+            <a href="#" class="ml-4 text-gray-900 hidden sm:flex hover:underline">Telefony a zařízení</a>
+            <a href="#" class="ml-4 text-gray-900 hidden sm:flex hover:underline">Podpora</a>
+          </div>
+         <!-- Pravá část: další odkazy -->
+            <div class="flex items-center space-x-4">
+             <a href="#" class="text-[#0050FF] hover:text-blue-500">
+                <i data-lucide="search"></i>
+             </a>
+             <a href="#" class="text-[#0050FF] hover:text-blue-500"> 
+                <i data-lucide="shopping cart"></i>
+             </a>
+          
+               <button class="border border-[#0050FF] text-[#0050FF] font-bold text-md rounded-full px-8 py-3 hover:bg-blue-50">
+                 Moje O2
+               </button>
+
+            
+          </div>
+       
+        </nav>
+    
+   <main class="bg-[url('banner.webp')] bg-cover bg-center w-[50%] mx-auto overflow-hidden rounded-3xl text-white px-24 py-32 my-16">
+     <h1 class="text-3xl font-bold mb-4">O2 Spolu</h1>
+      <div class="w-1/2 space-y-6"> 
+        <h2 class="font-bold text-5xl">První měsíc na zkoušku</h2> 
+        <p>Sledujte nejnovější filmy i seriálové hity výhodně a na jednom místě.</p>
+         <button class="bg-green-500 text-gray-800 font-bold text-md rounded-full px-8 py-3">Chci sledovat</button> </div> </main>
+    </main>
+ 
+    
+     <div class="container max-w-screen-lg mx-auto px-4">
+ <main class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-x-6 gap-y-6 place-items-center h-auto pt-10">
+    <a href="#" class="block">
+      <div class="bg-neutral-100 text-black p-6 rounded-xl shadow w-full h-32 flex flex-col items-center justify-center text-center space-y-2">
+        <i data-lucide="calculator" class="w-10 h-10 text-[#0050FF]"></i>
+        <span class="text-lg font-bold text-black">Tarify</span>
+      </div>
+    </a>
+    <a href="#" class="block">
+      <div class="bg-neutral-100 text-black p-6 rounded-xl shadow w-full h-32 flex flex-col items-center justify-center text-center space-y-2">
+        <i data-lucide="network" class="w-10 h-10 text-[#0050FF]"></i>
+        <span class="text-lg font-bold text-black">Internet</span>
+      </div>
+    </a>
+      <a href="#" class="block">
+      <div class="bg-neutral-100 text-black p-6 rounded-xl shadow w-full h-32 flex flex-col items-center justify-center text-center space-y-2">
+       <i data-lucide="monitor" class="w-10 h-10 text-[#0050FF]"></i>
+       <span class="text-lg font-bold text-black">Oneplay</span>
+      </div>
+    </a>
+      <a href="#" class="block">
+       <div class="bg-neutral-100 text-black p-6 rounded-xl shadow w-full h-32 flex flex-col items-center justify-center text-center space-y-2">
+       <i data-lucide="phone" class="w-10 h-10 text-[#0050FF]"></i>
+       <span class="text-lg font-bold text-black">O2 Spolu</span>
+      </div>
+    </a>
+    <a href="#" class="block">
+      <div class="bg-neutral-100 text-black p-6 rounded-xl shadow w-full h-32 flex flex-col items-center justify-center text-center space-y-2">
+        <i data-lucide="receipt" class="w-10 h-10 text-[#0050FF]"></i>
+        <span class="text-lg font-bold text-black">Vyúčtování</span>
+      </div>
+    </a>
+    <a href="#" class="block">
+       <div class="bg-neutral-100 text-black p-6 rounded-xl shadow w-full h-32 flex flex-col items-center justify-center text-center space-y-2">
+       <i data-lucide="user" class="w-10 h-10 text-[#0050FF]"></i>
+       <span class="text-lg font-bold text-black">Moje O2</span>
+      </div>
+    </a>
+   </main>
+   <section class=" max-w-screen-lg mx-auto my-16">
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+     <div class="flex flex-col bg-neutral-100 p-6 rounded-xl shadow items-center text-left space-y-4">
+      <h3 class="text-lg font-semibold text-black">Druhou SIM k mobilnímu tarifu<br> připojíte s O₂ Connect</h3>
+      <p class="text-sm text-gray-700">Pořiďte si zdarma druhou SIM do tabletu<br>i chytrých hodinek a propojte je s tarifem.</p>
+      <button class="border border-[#0050FF]  text-[#0050FF] font-bold text-sm  px-6 py-2 rounded-full">Zjistit víc</button>
+      <div class="flex justify-center">
+       <img src="2SIM.png"alt="Dvě SIM karty k tarifu O2 Connect"class="w-32 h-auto">
+      </div> 
+    </div>
+     <div class="flex flex-col space-y-4 text-left">
+       <h3 class="text-lg font-semibold text-black">Při objednávce online<br> instalace technikem zdarma</h3>
+       <p class="text-sm text-gray-700">Náš optický i MAX internet můžete mít<br> už od 399 Kč/měsíc na půl roku..</p>
+       <button class="border border-[#0050FF]  text-[#0050FF] font-bold text-sm  px-6 py-2 rounded-full">Zjistit dostupnost</button>
+      <div class="flex justify-center">
+        <img src="MAXInternet.png"alt="Optický internet"class="w-32 h-auto">
+      </div> 
+    
+     </div>
+  </section>
+  
+
+
+
+     </div>       
+
+    </div>
+<script>  lucide.createIcons(); </script>
+<script src="script.js"></script> 
+ </body>
+</html>
+
+
+
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      

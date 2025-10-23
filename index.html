@@ -1,3 +1,21 @@
-Ahoj jak to jde
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <script src="https://cdn.tailwindcss.com"></script>
+    <title>Kontaktní formulář</title>
+</head>
+<body>
+  <form id="contactForm" method="POST" action="process.php" class="max-w-md mx-auto mt-10 p-6 border border-gray-300 rounded-lg shadow-lg">
+    <label for="name" class="block mb-2 font-semibold">Jméno:</label>
+    <input type="text" class="w-full mb-4 p-2 border rounded border-gray-300" id="name" name="name" required>
+    <br>
+    <label for="email" class="block mb-2 font-semibold">Email:</label>
+    <input type="email"class="w-full mb-4 p-2 border rounded border-gray-300" id="email" name="email" required>
+    <br>
+    <input type="submit" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"value="Odeslat">
+    </form>
+</body>
 
-
+</html>

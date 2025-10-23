@@ -1,0 +1,10 @@
+//tailwind.config.js
+module.export = {
+ theme:{
+  extend:{
+   colors:{
+    o2blue: '#0050FF',
+          },
+         },
+        },
+       }
